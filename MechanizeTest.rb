@@ -7,7 +7,7 @@ require 'uri'
 # ======================================================================
 # NAME   : Mechanize(2.7.6) Test
 # DATE   : 2018-10-30 06:54
-# AUTHER : Create by PengMo.
+# AUTHER : Created by PengMo.
 # VERSION: 0.1
 # DOCS   : https://www.rubydoc.info
 # ======================================================================
@@ -29,8 +29,8 @@ class NetRobot
 	# FUNC	: 获得 css
 	# IN	: element 元素
     # OUT	: 元素的 css
-    # DATE  : 2018.11.02 15:08
-	# AUTHOR: Create by PengMo. 
+	# DATE  : 2018.11.02 15:08
+	# AUTHOR: Created by PengMo. 
 	# --------------------------------------------------------------------------------
 	def get_css(element)
 		css = []
@@ -46,8 +46,8 @@ class NetRobot
 	# FUNC	: 日期格式化14位
 	# IN	: date 日期
     # OUT	: 格式化日期
-    # DATE  : 2018.11.02 15:08
-	# AUTH  : Create by PengMo. 
+	# DATE  : 2018.11.02 15:08
+	# AUTH  : Created by PengMo. 
 	# --------------------------------------------------------------------------------
 	def format_date(date)
 		if (date != "")
@@ -63,9 +63,9 @@ class NetRobot
 	# --------------------------------------------------------------------------------
 	# FUNC	: 获得日期元素
 	# IN	: element 元素
-    # OUT	: 返回日期元素TEXT和格式化日期
-    # DATE  : 2018.11.02 15:15
-	# AUTHOR: Create by PengMo.
+	# OUT	: 返回日期元素TEXT和格式化日期
+	# DATE  : 2018.11.02 15:15
+	# AUTHOR: Created by PengMo.
 	# --------------------------------------------------------------------------------
 	def get_date(element)
 		for children in element.children
@@ -95,9 +95,9 @@ class NetRobot
 	# FUNC	: 获得翻页内容
 	# IN	: page 当前页面
 	# 		: page_num 页码
-    # OUT	: 翻页后的 page
-    # DATE  : 2018.11.02 15:13
-	# AUTHOR: Create by PengMo.
+	# OUT	: 翻页后的 page
+	# DATE  : 2018.11.02 15:13
+	# AUTHOR: Created by PengMo.
 	# --------------------------------------------------------------------------------
 	def get_next_page(page, page_num)
 		next_page_link = page.link_with(:text=>/^\W?#{page_num}\W?$/)
@@ -118,8 +118,8 @@ class NetRobot
 	# FUNC	: 获得页面
 	# IN	: url 网址
     # OUT	: 返回网址的page页面
-    # DATE  : 2018-11-02 15:11
-	# AUTHOR: Create by PengMo.
+	# DATE  : 2018-11-02 15:11
+	# AUTHOR: Created by PengMo.
 	# --------------------------------------------------------------------------------
 	def get_page(url)
 		page = @agent.get(URI(url))
@@ -139,8 +139,8 @@ class NetRobot
 	# IN	: page 当前页面
 	# 		: list_ignore_links 忽略连接
 	# OUT	: 新闻列表内容，格式为  标题<##>发布时间<##>URL
-    # DATE  : 2018-11-02 15:11
-	# AUTHOR: Create by PengMo.
+	# DATE  : 2018-11-02 15:11
+	# AUTHOR: Created by PengMo.
 	# --------------------------------------------------------------------------------
 	def get_list(page, list_ignore_links = {})
 		
@@ -195,8 +195,8 @@ class NetRobot
 	# IN	: page 页面1
 	# 		: page2 页面2
 	# OUT	: 忽略连接原则是取两个页面中交集连接
-    # DATE  : 2018-11-02 15:11
-	# AUTHOR: Create by PengMo.
+	# DATE  : 2018-11-02 15:11
+	# AUTHOR: Created by PengMo.
 	# --------------------------------------------------------------------------------
 	def get_ignore_links(page, page2)
 		
